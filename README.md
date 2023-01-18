@@ -1,16 +1,5 @@
-# bookio
+# Front-End Aplikasi Bookio (Tampilan mobile Aplikasi Penyewaan Studi Musik)
 
-A new Flutter project.
+### Deskripsi Singkat
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+_Front-End Aplikasi bookio merupakan tampilan dari aplikasi atau user interface untuk penyedia dan penyewa studio musik yang dibangun untuk memenuhi tugas akhir saya selama menempuh pendidikan di bangku kuliah tepatnya di Politeknik Negeri Banyuwangi jurusan D3 Teknik Informatika. User interface ini dibangun dengan menggunakan framework_ [Flutter](https://flutter.dev/)_dalam pembuatan dan pengembanganya. Aplikasi ini terhubung dengan backend aplikasi bookio pada repository_ [Back-End bookio](https://github.com/bogaZ/back-end-bookioApp) _. Sehingga anda harus menginstal dan menjalankan backend dari aplikasi ini._
