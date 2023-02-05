@@ -6,7 +6,7 @@ import 'package:bookio2/models/RuangDipesan.dart';
 import 'package:bookio2/page/Pembayaran.dart';
 import 'package:bookio2/page/PilihJadwal.dart';
 import 'package:bookio2/page/penyedia/PemesananLangsung.dart';
-import 'package:bookio2/widget/ButtonNavbar.dart';
+import 'package:bookio2/widget/button_navbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,7 @@ import 'api.dart';
 
 class PilihJadwalServices with ChangeNotifier {
   // DATA //! RUANG YANG DIPESAN SESUAI DENGAN ID PEMESANAN
-  List<RuangDipesan> _dataRuangDipesan = [
+  final List<RuangDipesan> _dataRuangDipesan = [
     // RuangDipesan(
     //     idRuangDipesan: "2",
     //     idPemesanan: "1",

@@ -5,7 +5,7 @@ import 'package:bookio2/provider/UserProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
 import 'package:provider/provider.dart';
-import '../widget/GridStudio.dart';
+import '../widget/grid_studio.dart';
 
 class HomePenyewa extends StatefulWidget {
   HomePenyewa({Key? key}) : super(key: key);

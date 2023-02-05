@@ -1,8 +1,5 @@
-// import 'package:bookio2/provider/StudioProvider.dart';
-// ignore_for_file: file_names
-
 import 'package:bookio2/provider/UserProvider.dart';
-import 'package:bookio2/widget/ModalsPopup.dart';
+import 'package:bookio2/widget/modals_popup.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../provider/PilihJadwalProvider.dart';

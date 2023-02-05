@@ -1,5 +1,5 @@
 import 'package:bookio2/page/SplashScreen.dart';
-import 'package:bookio2/widget/Sidebar.dart';
+import 'package:bookio2/widget/sidebar.dart';
 import 'package:bookio2/widget/penyedia/ButtonNavbar.dart';
 import 'package:flutter/material.dart';
 import 'package:bookio2/services/api.dart';

@@ -5,9 +5,10 @@ import 'package:provider/provider.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 // TAMPILAN //!KALENDER
+@immutable
 class KalenderBookio extends StatelessWidget {
-  int idStudio;
-  KalenderBookio({required this.idStudio});
+  final int idStudio;
+  const KalenderBookio({super.key, required this.idStudio});
   @override
   Widget build(BuildContext context) {
     // MENGAMBIL //! DATA TANGGAL DARI PROVIDER PILIH JADWAL
@@ -38,7 +39,7 @@ class KalenderBookio extends StatelessWidget {
           pilihJadwalProvider.totalPembayaran = 0;
           pilihJadwalServices.counter += 1;
         },
-        calendarStyle: CalendarStyle(
+        calendarStyle: const CalendarStyle(
           isTodayHighlighted: false,
           selectedDecoration: BoxDecoration(
             color: Colors.deepOrange,

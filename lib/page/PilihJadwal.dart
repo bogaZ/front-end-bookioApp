@@ -1,11 +1,11 @@
 import 'package:bookio2/provider/PilihJadwalProvider.dart';
 import 'package:bookio2/services/PilihJadwalServices.dart';
-import '../widget/ButtonPembayaran.dart';
+import '../widget/button_pembayaran.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import '../widget/kalender.dart';
-import '../widget/GridRuang.dart';
-import '../widget/GridJam.dart';
+import '../widget/grid_ruang.dart';
+import '../widget/grid_jam.dart';
 import '../provider/StudioProvider.dart';
 
 class PilihJadwal extends StatefulWidget {

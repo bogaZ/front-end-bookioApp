@@ -1,10 +1,8 @@
 // import 'package:bookio2/provider/jam.dart';
-// ignore_for_file: file_names
-
 import 'package:bookio2/provider/PilihJadwalProvider.dart';
 import 'package:bookio2/services/PilihJadwalServices.dart';
 import 'package:flutter/material.dart';
-import 'ButtonJam.dart';
+import 'button_jam.dart';
 import 'package:provider/provider.dart';
 
 // TAMPILAN //!PEMILIHAN JAM

@@ -1,8 +1,8 @@
 import 'package:bookio2/provider/PilihJadwalProvider.dart';
 import 'package:bookio2/provider/StudioProvider.dart';
 import 'package:bookio2/services/PilihJadwalServices.dart';
-import 'package:bookio2/widget/GridJam.dart';
-import 'package:bookio2/widget/GridRuang.dart';
+import 'package:bookio2/widget/grid_jam.dart';
+import 'package:bookio2/widget/grid_ruang.dart';
 import 'package:bookio2/widget/kalender.dart';
 import 'package:bookio2/widget/penyedia/ModalsPopup.dart';
 import 'package:flutter/material.dart';

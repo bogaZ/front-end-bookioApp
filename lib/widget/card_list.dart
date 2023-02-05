@@ -1,5 +1,3 @@
-// ignore_for_file: file_names, must_be_immutable
-
 import 'package:bookio2/page/DetailPemesanan.dart';
 import 'package:flutter/material.dart';
 
@@ -9,15 +7,15 @@ class CardList extends StatelessWidget {
   //   Key? key,
 
   // }) : super(key: key);
-  String image;
-  DateTime tanggal;
-  int idPemesanan;
-  String invoice;
-  String namaTempat;
-  String status;
-  DateTime dedline;
+  final String image;
+  final DateTime tanggal;
+  final int idPemesanan;
+  final String invoice;
+  final String namaTempat;
+  final String status;
+  final DateTime dedline;
 
-  CardList({
+  const CardList({
     super.key,
     required this.image,
     required this.tanggal,

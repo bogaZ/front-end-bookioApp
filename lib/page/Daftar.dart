@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:bookio2/services/api.dart';
-import 'package:bookio2/widget/ButtonNavbar.dart';
-import 'package:bookio2/widget/Sidebar.dart';
+import 'package:bookio2/widget/button_navbar.dart';
+import 'package:bookio2/widget/sidebar.dart';
 import 'package:bookio2/widget/penyedia/ButtonNavbar.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';

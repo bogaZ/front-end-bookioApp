@@ -7,7 +7,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:path/path.dart';
 import 'package:provider/provider.dart';
-import '../widget/ButtonNavbar.dart';
+import '../widget/button_navbar.dart';
 import '../widget/timer.dart';
 import 'dart:io';
 

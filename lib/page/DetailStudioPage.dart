@@ -1,16 +1,16 @@
 import 'package:bookio2/page/PilihJadwal.dart';
 import 'package:bookio2/page/SemuaUlasan.dart';
 import 'package:bookio2/provider/JadwalProvider.dart';
-import '../widget/JadwalLeft.dart';
+import '../widget/jadwal_left.dart';
 import 'package:bookio2/provider/RuangProvider.dart';
 import 'package:bookio2/provider/StudioProvider.dart';
-import 'package:bookio2/widget/RatingCard.dart';
+import 'package:bookio2/widget/rating_card.dart';
 import 'package:flutter/material.dart';
 import 'package:page_indicator/page_indicator.dart';
 import 'package:provider/provider.dart';
 import '../provider/StudioProvider.dart';
 import '../provider/RatingProvider.dart';
-import '../widget/JadwalRight.dart';
+import '../widget/jadwal_right.dart';
 
 class DetailStudio extends StatefulWidget {
   static const nameRoute = "/detailStudio";
@@ -250,7 +250,7 @@ class _DetailStudioState extends State<DetailStudio> {
                                           Jadwal1(
                                             data: studioProvider.jadwal,
                                           ),
-                                          jadwal2(
+                                          Jadwal2(
                                             data: studioProvider.jadwal,
                                           )
                                         ],
@@ -264,7 +264,7 @@ class _DetailStudioState extends State<DetailStudio> {
                                               SizedBox(
                                                 width: 40,
                                               ),
-                                              jadwal2(
+                                              Jadwal2(
                                                   data: studioProvider.jadwal),
                                             ],
                                           )
@@ -284,7 +284,7 @@ class _DetailStudioState extends State<DetailStudio> {
                                                   SizedBox(
                                                     width: 40,
                                                   ),
-                                                  jadwal2(
+                                                  Jadwal2(
                                                       data: studioProvider
                                                           .jadwal),
                                                 ],

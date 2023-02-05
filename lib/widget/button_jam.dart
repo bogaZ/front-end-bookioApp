@@ -1,12 +1,11 @@
-// ignore_for_file: file_names, must_be_immutable
-
 import 'package:bookio2/provider/PilihJadwalProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+@immutable
 class ButtonJam extends StatelessWidget {
-  int index;
-  ButtonJam({super.key, required this.index});
+  final int index;
+  const ButtonJam({super.key, required this.index});
   @override
   Widget build(BuildContext context) {
     return Consumer<PilihJadwalProvider>(

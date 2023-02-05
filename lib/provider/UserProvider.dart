@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:bookio2/models/User.dart';
 import 'package:bookio2/page/Profil.dart';
 import 'package:bookio2/services/api.dart';
-import 'package:bookio2/widget/ButtonNavbar.dart';
+import 'package:bookio2/widget/button_navbar.dart';
 import 'package:bookio2/widget/penyedia/ButtonNavbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

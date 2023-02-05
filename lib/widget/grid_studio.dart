@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'CustomCard.dart';
+import 'custom_card.dart';
 import '../provider/StudioProvider.dart';
 
 class GridStudio extends StatelessWidget {
+  const GridStudio({super.key});
+
   @override
   Widget build(BuildContext context) {
     // PROVIDER //! DATA STUDIO MUSIK
@@ -13,7 +15,7 @@ class GridStudio extends StatelessWidget {
           future: studioProvider.getAllDataStudio(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(color: Colors.deepOrange),
               );
             }

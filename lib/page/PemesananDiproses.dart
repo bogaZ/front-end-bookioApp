@@ -2,7 +2,7 @@ import 'package:bookio2/provider/PemesananProvider.dart';
 import 'package:bookio2/provider/StudioProvider.dart';
 import 'package:provider/provider.dart';
 
-import '../widget/CardList.dart';
+import '../widget/card_list.dart';
 import 'package:flutter/material.dart';
 
 class PemesananDiproses extends StatefulWidget {

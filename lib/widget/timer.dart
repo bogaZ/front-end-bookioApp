@@ -1,25 +1,25 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 
+@immutable
 class TimerBookio extends StatefulWidget {
-  TimerBookio({Key? key}) : super(key: key);
+  const TimerBookio({Key? key}) : super(key: key);
 
   @override
   State<TimerBookio> createState() => _TimerBookioState();
 }
 
 class _TimerBookioState extends State<TimerBookio> {
-  Duration endTimer = Duration(seconds: 10);
+  Duration endTimer = const Duration(seconds: 10);
 
   Timer? timer;
   @override
   void initState() {
     super.initState();
-    timer = Timer.periodic(Duration(seconds: 1), (timer) {
+    timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
         //print(endTimer);
-        endTimer -= Duration(seconds: 1);
+        endTimer -= const Duration(seconds: 1);
         if (endTimer.inMinutes == 0 && endTimer.inSeconds == 0) {
           bookingDibatalkan(context);
           timer.cancel();
@@ -32,7 +32,7 @@ class _TimerBookioState extends State<TimerBookio> {
   Widget build(BuildContext context) {
     return Text(
       "${_doubleDigitParse(endTimer.inMinutes % 60)}: ${_doubleDigitParse(endTimer.inSeconds % 60)}",
-      style: TextStyle(fontSize: 18, color: Colors.white),
+      style: const TextStyle(fontSize: 18, color: Colors.white),
     );
   }
 
@@ -46,18 +46,18 @@ class _TimerBookioState extends State<TimerBookio> {
 
   bookingDibatalkan(BuildContext context) {
     // set up the button
-    Widget okButton = Container(
+    Widget okButton = SizedBox(
       width: 100,
       child: ElevatedButton(
-          style: ElevatedButton.styleFrom(primary: Colors.deepOrange),
+          style: ElevatedButton.styleFrom(backgroundColor: Colors.deepOrange),
           onPressed: () => Navigator.pop(context),
-          child: Text('Ok')),
+          child: const Text('Ok')),
     );
 
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
       //title: Text("My title"),
-      title: Text(
+      title: const Text(
         'Booking Omexo Studio Musik Banyuwangi',
         style: TextStyle(
           fontSize: 18,
@@ -65,7 +65,8 @@ class _TimerBookioState extends State<TimerBookio> {
         ),
       ),
       actionsAlignment: MainAxisAlignment.center,
-      content: Text("Waktu upload bukti pembayaran habis pemesanan kadaluarsa"),
+      content: const Text(
+          "Waktu upload bukti pembayaran habis pemesanan kadaluarsa"),
       actions: [
         okButton,
       ],

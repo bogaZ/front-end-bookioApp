@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widget/ListNotifikasi.dart';
+import '../widget/list_notifikasi.dart';
 
 class Notifikasi extends StatefulWidget {
   static const routeName = "/notifikasi";

@@ -1,17 +1,17 @@
-// ignore_for_file: file_names, must_be_immutable, no_logic_in_create_state, library_private_types_in_public_api
-
 import 'dart:io';
 import 'package:bookio2/page/PemesananDiproses.dart';
 import 'package:bookio2/page/Profil.dart';
 import 'package:flutter/material.dart';
 import '../page/HomePage.dart';
 
+@immutable
 class BottomNavbar extends StatefulWidget {
-  int argument;
+  final int argument;
   static const nameRoute = "/navbar";
-  BottomNavbar({Key? key, required this.argument}) : super(key: key);
+  const BottomNavbar({Key? key, required this.argument}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api, no_logic_in_create_state
   _BottomNavbarState createState() => _BottomNavbarState(argument: argument);
 }
 

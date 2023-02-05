@@ -1,5 +1,5 @@
 import 'package:bookio2/provider/RatingProvider.dart';
-import 'package:bookio2/widget/RatingCard.dart';
+import 'package:bookio2/widget/rating_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

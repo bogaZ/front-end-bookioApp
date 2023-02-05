@@ -15,19 +15,17 @@ class Sidebar extends StatelessWidget {
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Container(
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Text(
-                "Login sebagai..?",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                  color: Colors.black45,
-                ),
+          const Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Text(
+              "Login sebagai..?",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+                color: Colors.black45,
               ),
             ),
           ),
@@ -35,15 +33,17 @@ class Sidebar extends StatelessWidget {
             padding: const EdgeInsets.all(0.0),
             child: InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoginPenyedia()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LoginPenyedia()));
               },
               child: Container(
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
                 child: ListTile(
                   title: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         'Penyedia',
                         style: TextStyle(
@@ -56,12 +56,12 @@ class Sidebar extends StatelessWidget {
                     ],
                   ),
 
-                  leading: Icon(
+                  leading: const Icon(
                     Icons.login_outlined,
                     color: Colors.deepOrange,
                     size: 30,
                   ),
-                  trailing: Icon(
+                  trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: Color(0xFF303030),
                     size: 20,
@@ -75,17 +75,19 @@ class Sidebar extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
             child: InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoginPenyewa()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LoginPenyewa()));
               },
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: null,
                 ),
                 child: ListTile(
                   title: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         'Penyewa',
                         style: TextStyle(
@@ -98,12 +100,12 @@ class Sidebar extends StatelessWidget {
                     ],
                   ),
 
-                  leading: Icon(
+                  leading: const Icon(
                     Icons.login_outlined,
                     color: Colors.deepOrange,
                     size: 30,
                   ),
-                  trailing: Icon(
+                  trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: Color(0xFF303030),
                     size: 20,

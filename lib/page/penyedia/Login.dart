@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:bookio2/page/SplashScreen.dart';
 import 'package:bookio2/page/penyedia/Daftar.dart';
 import 'package:bookio2/services/api.dart';
-import 'package:bookio2/widget/Sidebar.dart';
+import 'package:bookio2/widget/sidebar.dart';
 import 'package:bookio2/widget/penyedia/ButtonNavbar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

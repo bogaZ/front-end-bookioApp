@@ -51,7 +51,7 @@ import 'package:bookio2/provider/penyedia/WithdrawProvider.dart';
 import 'package:bookio2/services/JadwalServices.dart';
 import 'package:bookio2/services/RekeningService.dart';
 import 'package:bookio2/services/WithdrawServices.dart';
-import 'package:bookio2/widget/ButtonNavbar.dart';
+import 'package:bookio2/widget/button_navbar.dart';
 import 'package:bookio2/widget/penyedia/ButtonNavbar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -103,7 +103,7 @@ class MyApp extends StatelessWidget {
         //initialRoute: BottomNavbar.nameRoute,
         routes: {
           // ROUTE //! PENYEWA STUDIO
-          BottomNavbar.nameRoute: (context) => BottomNavbar(argument: 0),
+          BottomNavbar.nameRoute: (context) => const BottomNavbar(argument: 0),
           DetailStudio.nameRoute: (context) => const DetailStudio(),
           PilihJadwal.nameRoute: (context) => PilihJadwal(),
           Pembayaran.routeName: (context) => Pembayaran(),

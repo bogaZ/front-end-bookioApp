@@ -1,14 +1,13 @@
-// ignore_for_file: file_names, must_be_immutable
-
 import 'package:bookio2/page/DetailStudioPage.dart';
 // import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+@immutable
 class CustomCard extends StatelessWidget {
   //ini adalah konstruktor, saat class dipanggil parameter konstruktor wajib diisi
   //parameter ini akan mengisi title dan gambar pada setiap card
-  CustomCard(
+  const CustomCard(
       {super.key,
       required this.id,
       required this.title,
@@ -16,12 +15,12 @@ class CustomCard extends StatelessWidget {
       required this.tarif,
       required this.rating,
       required this.jumlah});
-  int id;
-  String title;
-  String image;
-  int tarif;
-  double rating;
-  int jumlah;
+  final int id;
+  final String title;
+  final String image;
+  final int tarif;
+  final double rating;
+  final int jumlah;
 
   @override
   Widget build(BuildContext context) {

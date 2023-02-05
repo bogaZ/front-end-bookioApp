@@ -1,5 +1,5 @@
 import 'package:bookio2/provider/NotifikasiProvider.dart';
-import 'package:bookio2/widget/ListNotifikasi.dart';
+import 'package:bookio2/widget/list_notifikasi.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

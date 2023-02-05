@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+@immutable
 class RatingCard extends StatelessWidget {
-  String nama;
-  double rating;
-  String tanggal;
+  final String nama;
+  final double rating;
+  final String tanggal;
 
-  RatingCard({required this.nama, required this.rating, required this.tanggal});
+  const RatingCard(
+      {super.key,
+      required this.nama,
+      required this.rating,
+      required this.tanggal});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +29,7 @@ class RatingCard extends StatelessWidget {
               width: 50,
               height: 50,
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Column(
@@ -36,25 +41,25 @@ class RatingCard extends StatelessWidget {
                   child: Row(
                     children: [
                       RatingBarIndicator(
-                        itemBuilder: (context, index) => Icon(
+                        itemBuilder: (context, index) => const Icon(
                           Icons.star_rounded,
                           color: Colors.amber,
                         ),
                         direction: Axis.horizontal,
                         rating: rating,
-                        unratedColor: Color(0xFF9E9E9E),
+                        unratedColor: const Color(0xFF9E9E9E),
                         itemCount: 5,
                         itemSize: 20,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Text(rating.toString()),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Text(tanggal,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.black38,
                           )),
                     ],
@@ -64,7 +69,7 @@ class RatingCard extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         )
       ],

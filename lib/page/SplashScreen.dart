@@ -5,7 +5,7 @@ import 'package:bookio2/page/OptionalUser.dart';
 import 'package:bookio2/page/penyedia/Login.dart';
 import 'package:bookio2/provider/AutenticationProvider.dart';
 import 'package:bookio2/services/api.dart';
-import 'package:bookio2/widget/ButtonNavbar.dart';
+import 'package:bookio2/widget/button_navbar.dart';
 import 'package:bookio2/widget/penyedia/ButtonNavbar.dart';
 import 'package:easy_splash_screen/easy_splash_screen.dart';
 
