@@ -1,4 +1,6 @@
-import 'package:bookio2/provider/jam.dart';
+// import 'package:bookio2/provider/jam.dart';
+// ignore_for_file: file_names
+
 import 'package:bookio2/provider/PilihJadwalProvider.dart';
 import 'package:bookio2/services/PilihJadwalServices.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +9,8 @@ import 'package:provider/provider.dart';
 
 // TAMPILAN //!PEMILIHAN JAM
 class PemilihanJam extends StatelessWidget {
+  const PemilihanJam({super.key});
+
   @override
   Widget build(BuildContext context) {
     final data = Provider.of<PilihJadwalProvider>(context, listen: false);
@@ -18,7 +22,7 @@ class PemilihanJam extends StatelessWidget {
               myData, data.studioProvider.detailStudio.id),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(color: Colors.deepOrange),
               );
             }
@@ -29,28 +33,29 @@ class PemilihanJam extends StatelessWidget {
                       .getDataPemesanan(pilihJadwalServices.dataRuangDipesan),
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return Center(
+                      return const Center(
                         child:
                             CircularProgressIndicator(color: Colors.deepOrange),
                       );
                     }
                     return Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                       child: Column(
                         children: [
                           GridView.builder(
-                            physics: NeverScrollableScrollPhysics(),
+                            physics: const NeverScrollableScrollPhysics(),
                             shrinkWrap: true,
                             gridDelegate:
-                                SliverGridDelegateWithFixedCrossAxisCount(
+                                const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 6,
                               childAspectRatio: 1.0,
                               mainAxisSpacing: 10.0,
                               crossAxisSpacing: 10.0,
                             ),
                             itemCount: 24,
-                            itemBuilder: pilihJadwalProvider.dataRuang.length !=
-                                    0
+                            itemBuilder: pilihJadwalProvider
+                                    .dataRuang.isNotEmpty
                                 ? (context, index) {
                                     return ChangeNotifierProvider(
                                       create: (context) =>

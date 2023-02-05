@@ -1,11 +1,12 @@
-import 'package:bookio2/provider/PilihJadwalProvider.dart';
+// ignore_for_file: file_names, must_be_immutable
 
+import 'package:bookio2/provider/PilihJadwalProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class ButtonRuang extends StatelessWidget {
   int index;
-  ButtonRuang({required this.index});
+  ButtonRuang({super.key, required this.index});
   @override
   Widget build(BuildContext context) {
     return Consumer<PilihJadwalProvider>(

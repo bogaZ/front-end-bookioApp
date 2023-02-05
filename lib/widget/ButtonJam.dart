@@ -1,13 +1,12 @@
+// ignore_for_file: file_names, must_be_immutable
+
 import 'package:bookio2/provider/PilihJadwalProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class ButtonJam extends StatelessWidget {
-  @override
-  // TODO: implement key
-  Key? get key => super.key;
   int index;
-  ButtonJam({required this.index});
+  ButtonJam({super.key, required this.index});
   @override
   Widget build(BuildContext context) {
     return Consumer<PilihJadwalProvider>(
@@ -59,19 +58,9 @@ class ButtonJam extends StatelessWidget {
                       ),
                     ),
                     !pilihJadwalProvider.cekJadwal(index)
-                        ? Text("")
+                        ? const Text("")
                         : Text(
-                            "${pilihJadwalProvider.dataRuang[pilihJadwalProvider.indexRuang].tarif}"
-                                    .substring(
-                                        0,
-                                        pilihJadwalProvider
-                                                .dataRuang[pilihJadwalProvider
-                                                    .indexRuang]
-                                                .tarif
-                                                .toString()
-                                                .length -
-                                            3) +
-                                "K",
+                            "${"${pilihJadwalProvider.dataRuang[pilihJadwalProvider.indexRuang].tarif}".substring(0, pilihJadwalProvider.dataRuang[pilihJadwalProvider.indexRuang].tarif.toString().length - 3)}K",
                             style: TextStyle(
                               color: !pilihJadwalProvider.cekTanggal(index) ||
                                       !pilihJadwalProvider.sudahDipesan(index)

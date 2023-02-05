@@ -1,12 +1,24 @@
+// ignore_for_file: file_names, must_be_immutable
+
 import 'package:bookio2/page/DetailPemesanan.dart';
 import 'package:flutter/material.dart';
 
+@immutable
 class CardList extends StatelessWidget {
   // CardList({
   //   Key? key,
 
   // }) : super(key: key);
+  String image;
+  DateTime tanggal;
+  int idPemesanan;
+  String invoice;
+  String namaTempat;
+  String status;
+  DateTime dedline;
+
   CardList({
+    super.key,
     required this.image,
     required this.tanggal,
     required this.idPemesanan,
@@ -15,14 +27,6 @@ class CardList extends StatelessWidget {
     required this.status,
     required this.dedline,
   });
-
-  String image;
-  DateTime tanggal;
-  int idPemesanan;
-  String invoice;
-  String namaTempat;
-  String status;
-  DateTime dedline;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +50,7 @@ class CardList extends StatelessWidget {
                     color: Colors.grey.withOpacity(0.5),
                     spreadRadius: 1,
                     blurRadius: 5,
-                    offset: Offset(0, 3), // changes position of shadow
+                    offset: const Offset(0, 3), // changes position of shadow
                   ),
                 ],
                 borderRadius: BorderRadius.circular(10),
@@ -63,52 +67,45 @@ class CardList extends StatelessWidget {
                             ),
                             fit: BoxFit.cover)),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text((tanggal.day < 10
-                              ? '0' + tanggal.day.toString()
-                              : tanggal.day.toString()) +
-                          '/' +
-                          (tanggal.month < 10
-                              ? '0' + tanggal.month.toString()
-                              : tanggal.month.toString()) +
-                          '/' +
-                          tanggal.year.toString()),
-                      SizedBox(
+                      Text(
+                          '${tanggal.day < 10 ? '0${tanggal.day}' : tanggal.day.toString()}/${tanggal.month < 10 ? '0${tanggal.month}' : tanggal.month.toString()}/${tanggal.year}'),
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         'Id Pemesanan : ',
                         style: TextStyle(
                           color: Colors.black38,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 3,
                       ),
                       Text(
                         invoice,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 3,
                       ),
                       Text(
                         namaTempat,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 3,
                       ),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             'Status : ',
                             style: TextStyle(
                               color: Colors.black38,

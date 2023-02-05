@@ -1,5 +1,7 @@
+// ignore_for_file: file_names, must_be_immutable
+
 import 'package:bookio2/page/DetailStudioPage.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+// import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -7,7 +9,8 @@ class CustomCard extends StatelessWidget {
   //ini adalah konstruktor, saat class dipanggil parameter konstruktor wajib diisi
   //parameter ini akan mengisi title dan gambar pada setiap card
   CustomCard(
-      {required this.id,
+      {super.key,
+      required this.id,
       required this.title,
       required this.image,
       required this.tarif,
@@ -50,17 +53,17 @@ class CustomCard extends StatelessWidget {
                 padding: const EdgeInsets.all(10),
                 child: Column(
                   children: [
-                    Container(
+                    SizedBox(
                       width: double.infinity,
                       height: 80,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(title),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
-                          Text(
+                          const Text(
                             'Tarif Mulai : ',
                             style: TextStyle(
                                 color: Colors.black38,
@@ -81,7 +84,7 @@ class CustomCard extends StatelessWidget {
                                     color: Colors.orange[800],
                                   ),
                                 ),
-                                Text(' / jam')
+                                const Text(' / jam')
                               ],
                             ),
                           ),

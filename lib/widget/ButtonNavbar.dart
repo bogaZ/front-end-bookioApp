@@ -1,5 +1,6 @@
-import 'dart:io';
+// ignore_for_file: file_names, must_be_immutable, no_logic_in_create_state, library_private_types_in_public_api
 
+import 'dart:io';
 import 'package:bookio2/page/PemesananDiproses.dart';
 import 'package:bookio2/page/Profil.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   final List<Widget> _widgetOptions = [
     HomePenyewa(),
     PemesananDiproses(),
-    Profil(),
+    const Profil(),
   ];
 
   void _onItemTapped(int index) {
@@ -58,10 +59,12 @@ class _BottomNavbarState extends State<BottomNavbar> {
           currentIndex: _selectedIndex,
           selectedItemColor: Colors.deepOrange,
           unselectedItemColor: Colors.black45,
-          unselectedLabelStyle: TextStyle(color: Colors.black45, fontSize: 12),
+          unselectedLabelStyle:
+              const TextStyle(color: Colors.black45, fontSize: 12),
           onTap: _onItemTapped,
           showUnselectedLabels: true,
-          selectedLabelStyle: TextStyle(color: Colors.deepOrange, fontSize: 12),
+          selectedLabelStyle:
+              const TextStyle(color: Colors.deepOrange, fontSize: 12),
         ),
       ),
     );
