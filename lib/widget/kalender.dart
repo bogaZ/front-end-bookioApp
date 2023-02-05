@@ -12,13 +12,16 @@ class KalenderBookio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // MENGAMBIL //! DATA TANGGAL DARI PROVIDER PILIH JADWAL
+    int year = DateTime.now().year;
+    int month = DateTime.now().month;
     final pilihJadwalServices =
         Provider.of<PilihJadwalServices>(context, listen: false);
     return Consumer<PilihJadwalProvider>(
       builder: (context, pilihJadwalProvider, _) => TableCalendar(
         focusedDay: pilihJadwalProvider.tanggalDipilih,
         firstDay: pilihJadwalProvider.fokusTanggal,
-        lastDay: DateTime.utc(2022, 12, 30),
+        // last day harus melebihi tahun sekarang
+        lastDay: DateTime.utc(year, month + 3),
         availableCalendarFormats: const {
           CalendarFormat.month: 'Month',
         },
